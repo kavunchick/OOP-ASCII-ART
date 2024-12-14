@@ -29,16 +29,6 @@ run --image "path/to/image" --output-console
 
 You can use **yoshi.jpg** as an example image if you'd like!
 
-### How It Works
-
--   The **ImageLoader** class is responsible for loading the image.
-    
--   The **ASCIIConverter** class maps image pixels to ASCII characters.
-    
--   The **OutputHandler** class manages console or file output.
-    
-
-This separation of concerns makes the tool easy to modify and extend.
 
 ## Choose Your Table
 
@@ -55,8 +45,6 @@ To create your own custom mapping table, simply use:
 run --image "path/to/image" --custom-table "yourtable" --output-console
 ```
 
-The mapping logic is encapsulated within the **MappingStrategy** interface, making it easy to add new strategies.
-
 ## Filters You Can Use
 
 Enhance your ASCII art with various filters, implemented as separate, reusable components:
@@ -71,9 +59,6 @@ Enhance your ASCII art with various filters, implemented as separate, reusable c
     
 -   `--rotate` – Rotate the image (+ or - degrees)
     
-
-Each filter is implemented using the **Filter** interface, ensuring consistency and extensibility.
-
 ## Examples of Usage
 
 Here are some examples to get you started:
@@ -92,17 +77,7 @@ run --image "yoshi.jpg" --scale 0.25 --rotate +90 --invert --table nonlinear --o
 run --image "yoshi.jpg" --scale 0.25 --rotate -90 --brightness +50 --table linear --output-file "outputs/output.txt"
 ```
 
-## Extensibility
-
-Thanks to its OOP design, the tool can easily accommodate additional features:
-
--   **New Image Formats**: Add support for new formats by extending the **ImageLoader**.
-    
--   **Custom Filters**: Create and plug in new filters by implementing the **Filter** interface.
-    
--   **Enhanced Mapping**: Develop advanced ASCII mapping strategies with the **MappingStrategy** interface.
-    
 
 ## Enjoy the ASCII Art!
 
-With **Yoshi's ASCII Art Converter**, you're not just creating art—you're engaging with a well-architected software tool built with OOP principles. Have fun exploring, and remember: great code leads to great creativity!
+I hope you have fun turning your images into ASCII art! And remember, no matter how you tweak it, you'll always be a great artist!
